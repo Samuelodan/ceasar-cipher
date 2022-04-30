@@ -15,12 +15,12 @@ def ceasar_cipher(string, key)
     if letter == letter.upcase
       upper_case = true
       #change it to lowercase if it is
-      #letter.downcase!
+      letter.downcase!
     else
       upper_case = false
     end
     #check its index in our alphabet array
-    index = alphabets.index(letter.downcase) - key
+    index = alphabets.index(letter) - key
     #apply uppercase if it it was originally uppercase
     if upper_case == true
       crypt_letter = alphabets[index].upcase
@@ -35,4 +35,4 @@ def ceasar_cipher(string, key)
 
 end
 
-p ceasar_cipher("abcd efg", 3)
+p ceasar_cipher("Samodan195 egg", 3)
