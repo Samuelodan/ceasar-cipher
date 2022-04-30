@@ -8,7 +8,7 @@ def ceasar_cipher(string, key)
   str_array.each do |letter|
     #check if it's a letter
     unless letter.match?(/[a-zA-Z]/)
-      crypt_string = crypt_letter + letter
+      crypt_string += letter
       next
     end
     #check if it's uppercase
@@ -35,4 +35,4 @@ def ceasar_cipher(string, key)
 
 end
 
-p ceasar_cipher("catwoman", 3)
+p ceasar_cipher("abcd efg", 3)
