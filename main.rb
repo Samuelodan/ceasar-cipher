@@ -8,10 +8,11 @@ def ceasar_cipher(string, key)
   str_array.each do |character|
     #check if character is a letter in the English alphabet
     unless character.match?(/[a-zA-Z]/)
+      #skip entire process and add character to final crypt_string if it's not a letter
       crypt_string += character
       next
     end
-    #check if letter is uppercase
+    #check if letter in #{character} is uppercase
     if character == character.upcase
       upper_case = true
       #change it to lowercase if it is
