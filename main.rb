@@ -1,8 +1,6 @@
 #SOLUTION 1
 #ASCII METHOD
 def ceasar_cipher(string, key)
-  index = nil
-  crypt_letter = ""
   crypt_string = ""
   str_array = string.split("")
   str_array.each do |character|
