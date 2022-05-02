@@ -1,3 +1,39 @@
+#SOLUTION 1
+#ASCII METHOD
+def ceasar_cipher(string, key)
+  index = nil
+  crypt_letter = ""
+  crypt_string = ""
+  str_array = string.split("")
+  str_array.each do |character|
+    unless character.match?(/[a-zA-Z]/)
+      #skip entire process and add character to final crypt_string if it's not a letter
+      crypt_string += character
+      next
+    end
+    character = character.ord
+    if character.between?("a".ord, "z".ord) #for lowercase
+      position = character - "a".ord
+      character = ((position + key) % 26) + "a".ord #26 letters in the alphabet
+    else #for uppercase
+      position = character - "A".ord
+      character = ((position + key) % 26) + "A".ord
+    end
+    crypt_string += character.chr
+  end
+    crypt_string
+end
+
+p ceasar_cipher("zzZ 123", 5)
+
+
+
+
+
+
+
+
+#SOLUTION 2
 # ARRAY REFERENCE METHOD
 
 # def ceasar_cipher(string, key)
