@@ -1,5 +1,4 @@
-#SOLUTION 1
-#ASCII METHOD
+#SOLUTION 1, #ASCII METHOD
 def ceasar_cipher(string, key)
   crypt_string = ""
   string.each_char do |character|
@@ -21,14 +20,13 @@ def ceasar_cipher(string, key)
     crypt_string
 end
 
-p ceasar_cipher("zzZ 123", 5)
 
 
 
 
 
 
-
+#######################################################################################
 
 #SOLUTION 2
 # ARRAY REFERENCE METHOD
