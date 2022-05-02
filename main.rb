@@ -2,8 +2,7 @@
 #ASCII METHOD
 def ceasar_cipher(string, key)
   crypt_string = ""
-  str_array = string.split("")
-  str_array.each do |character|
+  string.each_char do |character|
     unless character.match?(/[a-zA-Z]/)
       #skip entire process and add character to final crypt_string if it's not a letter
       crypt_string += character
