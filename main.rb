@@ -15,7 +15,7 @@ def ceasar_cipher(string, key)
       position = character - "A".ord
       character = ((position + key) % 26) + "A".ord
     end
-    crypt_string += character.chr
+    crypt_string << character.chr
   end
     crypt_string
 end
