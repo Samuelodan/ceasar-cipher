@@ -1,7 +1,7 @@
 # frozen_string_literal: false
 
 # SOLUTION 1, #ASCII METHOD
-def ceasar_cipher(string, key)
+def ceasar_cipher(string:, key:)
   crypt_string = ''
   string.each_char do |character|
     unless character.match?(/[a-zA-Z]/)
@@ -21,6 +21,8 @@ def ceasar_cipher(string, key)
   end
   crypt_string
 end
+
+p ceasar_cipher(string: 'egg', key: 3)
 
 #######################################################################################
 
